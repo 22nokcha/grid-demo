@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Demo</title>
+</head>
+
+<style>
+    #grid-example-one div {
+        padding: 20px;
+        background-color: grey;
+    }
+
+    #grid-example-one {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /*fr=fraction*/
+        gap: 2px;
+    }
+</style>
+
+<body>
+    <div id="grid-example-one">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
