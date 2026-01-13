@@ -7,16 +7,62 @@
 </head>
 
 <style>
-    #grid-example-one div {
+    #grid-example-one div { /* select all child divs */
         padding: 20px;
         background-color: grey;
     }
 
     #grid-example-one {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /*fr=fraction*/
+        grid-template-columns: repeat(5, 1fr); /*fr=fraction*/
         gap: 2px;
     }
+
+    #grid-example-two {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); /*fr=fraction*/
+        grid-template-rows: repeat(6, 1fr);
+        gap: 2px;
+    }
+
+    #grid-example-two div{ /* select all child divs */
+        background-color: lightblue;padding: 20px;
+    }
+
+    #header {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 6;
+    }
+
+    #sidebar {
+
+        grid-row: 2 / 6;
+        grid-column: 1 / 2; 
+    }
+
+    #content-one {
+        grid-row: 2 / 4;
+        grid-column: 2 / 6;
+    }
+
+    #content-two {
+        grid-row: 4 / 6;
+        grid-column: 2 / 4;
+    }
+
+    #content-three {
+        grid-row: 4 / 6;
+        grid-column: 4 / 6;
+    }
+
+
+    #footer {
+        grid-row: 6 / 7;
+        grid-column: span 6;
+    }
+
 </style>
 
 <body>
@@ -26,6 +72,46 @@
         <div></div>
         <div></div>
         <div></div>
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        
+    </div>
+
+    <div id="grid-example-two">
+        <div id="header">Header</div>
+        <div id="sidebar">Sidebar</div>
+        <div id="content-one">Content 1</div>
+        <div id="content-two">Content 2</div>
+        <div id="content-three">Content 3</div>
+        <div id="footer">Footer</div>
     </div>
 </body>
 </html>
